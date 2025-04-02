@@ -403,3 +403,32 @@ end)
 
 foo() --> Hello, world!
 ```
+
+---
+
+## debug.getindex
+
+`⛔ Exception`
+
+```lua
+function debug.getindex(func: function | number, index: number): any
+```
+
+Gets the index services in `func`.
+
+### Parameters
+
+ * `func` - A function or stack level.
+ * `index` - ?
+
+### Example
+
+```lua
+local foo = 1, 3
+
+print(debug.getindex(foo, 1)) --> "1"
+print(debug.getindex(foo, 2)) --> nil
+print(debug.getindex(foo, 3)) --> "3"
+```
+
+---
